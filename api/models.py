@@ -3,7 +3,10 @@ from django.db import models
 
 # Create your models here.
 class Article(models.Model):
-    pass
+    title = models.CharField(max_length=255)
+    slug = models.CharField(max_length=255, unique=True)
+    description = models.TextField()
+
 
 
 class Comments(models.Model):
