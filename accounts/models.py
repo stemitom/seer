@@ -32,7 +32,7 @@ class User(AbstractUser, TimestampedModel):
     first_name = models.CharField(_("first name"), max_length=100, blank=False, null=False)
     last_name = models.CharField(_("last name"), max_length=100, blank=False, null=False)
     is_email_verified = models.BooleanField(_("is email verified"), default=False)
-    email_verified_at = models.DateTimeField(_("email verified at"), blank=False, null=False)
+    email_verified_at = models.DateTimeField(_("email verified at"), blank=True, null=True)
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = ["username", "first_name", "last_name"]
