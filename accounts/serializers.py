@@ -1,4 +1,3 @@
-from wsgiref import validate
 from django.contrib.auth import get_user_model
 from rest_framework import serializers
 
